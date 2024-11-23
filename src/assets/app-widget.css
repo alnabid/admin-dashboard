@@ -1,0 +1,17 @@
+
+.app-widget {
+    display: none;
+}
+
+.showApp {
+    display: block;
+}
+
+section {
+    width: 500px;
+    height: 500px;
+    background: red;
+    z-index: 3;
+    opacity: 50%;
+    position: fixed;
+}
