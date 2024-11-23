@@ -35,8 +35,13 @@ export default {
         let selectedApp = document.getElementById(appName)
 
         if (appName) {
-          selectedApp.classList.add('showApp')
-          console.log(appName)
+          if (!selectedApp.classList.contains('showApp')) {
+            selectedApp.classList.add('showApp')
+            console.log(appName + ' is being shown')
+          } else {
+            selectedApp.classList.remove('showApp')
+            console.log(appName + ' is being hidden')
+          }
         }
     }
   }
