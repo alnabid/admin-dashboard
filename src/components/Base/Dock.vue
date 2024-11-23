@@ -52,53 +52,6 @@
     display: flex;
     gap: 0.5rem;
 }
-.item {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: 0.2s;
-    background: var(--basic-color);
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 0.5rem;
-    background: var(--basic-color);
-}
-.item i {
-    font-size: 1.2rem;
-    color: var(--secondary-color-v2);
-}
-.item:hover {
-    transform: scale(1.1);
-}
-.item p {
-    position: absolute;
-    top: -2rem;
-    background: white;
-    text-align: center;
-    left: -50%; 
-    right: 0; 
-    margin-inline: auto; 
-    width: 100px;
-    font-size: 0.8rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 1.5rem;
-    opacity: 0;
-    border-radius: 0.5rem;
-    transition: 0.2s;
-}
-.item:hover p {
-    opacity: 100%;
-}
 .active {
     position: absolute;
     bottom: -10px;
