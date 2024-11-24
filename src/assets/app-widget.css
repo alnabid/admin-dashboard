@@ -1,12 +1,14 @@
 .app-widget {
     /* width: 500px;
     height: 500px; */
-    background-color: red;
+    background-color: var(--basic-color);
+    color: var(--least-color);
     z-index: 3;
     /* opacity: 50%; */
     position: fixed;
     animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
     user-select: none;
+    border-radius: 0.5rem;
 }
 
 
@@ -103,4 +105,23 @@
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+}
+
+.app-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    background: var(--most-color);
+}
+.app-topbar h1 {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.app-topbar i {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+.app-content {
+    padding: 0.5rem;
 }

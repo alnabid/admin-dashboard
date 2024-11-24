@@ -84,6 +84,6 @@ export default {
 }
 
 .active {
-    border: 3px solid var(--secondary-color-v2);
+    outline: 2px solid var(--secondary-color-v2);
 }
 </style>

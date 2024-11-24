@@ -44,7 +44,7 @@ export default {
     data() {
         return {
             width: 500,
-            height: 500,
+            height: 450,
             resizing: false,
             resizeDirection: null,
             initialMouseX: 0,

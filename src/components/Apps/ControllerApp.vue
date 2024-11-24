@@ -7,7 +7,9 @@
                 <i class="bi bi-x-lg" @click="$emit('closeApp')"></i>
             </div>
         </div>
-        Im still working on it bozo
+        <div class="app-content">
+            kya karo
+        </div>
     </BaseApp>    
 </template>
 <script>
