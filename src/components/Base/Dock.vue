@@ -61,6 +61,12 @@ export default {
     background: var(--primary-color);
     border-radius: 0.5rem;
     gap: 0.5rem;
+    z-index: 100;
+    opacity: 80%;
+    transition: 0.5s;
+}
+.dock-container:hover {
+    opacity: 100%;
 }
 .divider {
     width: 1px;
@@ -78,6 +84,6 @@ export default {
 }
 
 .active {
-    border: 2px red solid;
+    border: 3px solid var(--secondary-color-v2);
 }
 </style>

@@ -21,7 +21,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.103);
     opacity: 100%;
-    z-index: -1;
+    z-index: 12;
 }
 
 .start-items {

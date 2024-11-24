@@ -12,12 +12,12 @@
 </template>
 <script>
 import Dock from '@/components/Base/Dock.vue';
-import ChatApp from '@/components/Apps/chatApp.vue';
+import ChatApp from '@/components/Apps/ChatApp.vue';
 import ControllerApp from '@/components/Apps/ControllerApp.vue';
 import SettingsApp from '@/components/Apps/SettingsApp.vue';
-import PersonalHubApp from '@/components/Apps/personalHubApp.vue';
+import InteractApp from '@/components/Apps/InteractApp.vue';
 import StartApp from '@/components/Apps/StartApp.vue';
-import OpenWorldApp from '@/components/Apps/openWorldApp.vue';
+import OpenWorldApp from '@/components/Apps/OpenWorldApp.vue';
 
 export default {
   components: {
@@ -25,7 +25,7 @@ export default {
     ChatApp,
     ControllerApp,
     SettingsApp,
-    PersonalHubApp,
+    InteractApp,
     StartApp,
     OpenWorldApp
   },
