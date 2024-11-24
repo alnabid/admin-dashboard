@@ -1,21 +1,21 @@
 <template>
-    <section id="controllerApp" class="app-widget">
+    <BaseApp appId="controllerApp">
+        
         <div class="app-topbar">
             <h1>Controller</h1>
             <div class="options">
-                <i class="bi bi-x-lg" @click="closeApp()"></i>
+                <i class="bi bi-x-lg" @click="$emit('closeApp')"></i>
             </div>
         </div>
         Im still working on it bozo
-    </section>
+    </BaseApp>    
 </template>
-<style>
-@import url(../../assets/app-widget.css);
-</style>
 <script>
-import appWidget from '@/mixins/appWidget';
+import BaseApp from './BaseApp.vue';
 
 export default {
-    mixins: [appWidget]
+    components: {
+        BaseApp
+    }
 }
 </script>

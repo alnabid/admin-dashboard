@@ -4,25 +4,9 @@
             <div class="start-content">
                 <h1>See All Apps</h1>
                 <div class="start-items">
-                    <div class="item" @click="$emit('openApp', 'controllerApp')">
-                        <p>Controller</p>
-                        <img src="@/assets/img/controller.webp" alt="">
-                    </div>
-                    <div class="item" @click="$emit('openApp', 'openWorldApp')">
-                        <p>Open World!</p>
-                        <i class="fa fa-earth-asia"></i>
-                    </div>
-                    <div class="item" @click="$emit('openApp', 'chatApp')">
-                        <p>Chat</p>
-                        <i class="fa-regular fa-comments"></i>
-                    </div>
-                    <div class="item" @click="$emit('openApp', 'personalHubApp')">
-                        <p>Personal Hub</p>
-                        <i class="fa fa-house-lock"></i>
-                    </div>
-                    <div class="item" @click="$emit('openApp', 'settingsApp')">
-                        <p>Settings</p>
-                        <i class="fa fa-gear"></i>
+                    <div v-for="dockItem in dockItems" :key="dockItem.name" class="item" @click="setActive(dockItem.app)">
+                        <p>{{ dockItem.label }}</p>
+                        <component :is="dockItem.iconType" :class="dockItem.icon" :src="dockItem.src"></component>
                     </div>
                 </div>
             </div>
@@ -39,16 +23,19 @@
     opacity: 100%;
     z-index: -1;
 }
+
 .start-items {
     display: flex;
     gap: 0.5rem;
 }
+
 .start-container {
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
+
 .start-content {
     background: #1b1b1e59;
     height: 300px;
@@ -59,6 +46,7 @@
     align-items: center;
     border-radius: 0.5rem;
 }
+
 .start-content h1 {
     font-size: 0.8rem;
     font-weight: 300;
@@ -67,9 +55,15 @@
 }
 </style>
 <script>
-import appWidget from '@/mixins/appWidget';
+import docktItems from '@/mixins/docktItems';
 
 export default {
-    mixins: [appWidget]
+    mixins: [docktItems],
+
+    methods: {
+        setActive(name) {
+            this.$emit('openApp', name);
+        },
+    },
 }
 </script>

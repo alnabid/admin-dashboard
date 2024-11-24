@@ -1,29 +1,106 @@
-
 .app-widget {
-    display: none;
-}
-
-.showApp {
-    display: block;
-}
-
-section {
-    width: 500px;
-    height: 500px;
-    background: red;
+    /* width: 500px;
+    height: 500px; */
+    background-color: red;
     z-index: 3;
-    opacity: 50%;
+    /* opacity: 50%; */
     position: fixed;
     animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    user-select: none;
+}
+
+
+.app-widget::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    cursor: ns-resize;
+}
+
+.app-widget::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    cursor: ns-resize;
+}
+
+.app-widget .left-edge {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    bottom: 0;
+    width: 10px;
+    cursor: ew-resize;
+
+}
+
+.app-widget .right-edge {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    width: 10px;
+    cursor: ew-resize;
+
+
+}
+
+.app-widget .top-left {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 18px;
+    height: 18px;
+    cursor: nwse-resize;
+}
+
+.app-widget .top-right {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width:18px;
+    height:18px;
+    cursor: nesw-resize;
+}
+
+.app-widget .bottom-left {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    width:18px;
+    height:18px;
+    cursor: nesw-resize;
+}
+
+.app-widget .bottom-right {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width:18px;
+    height:18px;
+    cursor: nwse-resize;
+    background-color: none;
+}
+
+
+.options i {
+    cursor: pointer !important;
 }
 
 @keyframes scale-down-center {
     0% {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
     }
+
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
