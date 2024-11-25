@@ -42,10 +42,14 @@ export default {
     },
     methods: {
         setActive(name, app) {
-            const exists = this.activeItems.findIndex(p => p === name);
-            if(exists === -1) {
+            const index = this.activeItems.findIndex(p => p === name);
+            
+            if(index === -1) {
                 this.activeItems.push(name)
+            } else {
+                this.activeItems.splice(index, 1);
             }
+
             this.$emit('openApp', app);
         },
     },

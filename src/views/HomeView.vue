@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Dock @openApp="openApp" ref="dock" />
+    <Dock @openApp="openApp"  ref="dock" />
 
     <div v-for="(app, index) in activeApps" :key="index" :class="{ 'draggable-app': app.draggable }"
       :style="{ top: app.position.y + 'px', left: app.position.x + 'px', zIndex: app.zIndex }"
@@ -39,18 +39,6 @@ export default {
   },
 
   methods: {
-
-    addApp(appName) {
-      const appIndex = this.activeApps.findIndex(app => app.name === appName);
-      this.activeApps.push({
-        name: appName,
-        position: { x: 0, y: 0 },
-        draggable: appName !== 'startApp',
-        zIndex: 0,
-        freezed: false,
-      });
-
-    },
     openApp(appName) {
       const appIndex = this.activeApps.findIndex(app => app.name === appName);
 
