@@ -14,7 +14,7 @@
                 v-for="dockItem in dockItems"
                 :key="dockItem.name"
                 class="item"
-                :class="{ active: activeItem === dockItem.name }"
+                :class="{ active: activeItems.includes(dockItem.name) }"
                 @click="setActive(dockItem.name, dockItem.app)"
             >
                 <p>{{ dockItem.label }}</p>
@@ -37,12 +37,15 @@ export default {
     },
     data() {
         return {
-            activeItem: '',
+            activeItems: [],
         };
     },
     methods: {
         setActive(name, app) {
-            this.activeItem = name;
+            const exists = this.activeItems.findIndex(p => p === name);
+            if(exists === -1) {
+                this.activeItems.push(name)
+            }
             this.$emit('openApp', app);
         },
     },

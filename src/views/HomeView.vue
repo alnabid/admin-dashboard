@@ -12,12 +12,12 @@
 </template>
 <script>
 import Dock from '@/components/Base/Dock.vue';
-import ChatApp from '@/components/Apps/ChatApp.vue';
+import ChatApp from '@/components/Apps/chatApp.vue';
 import ControllerApp from '@/components/Apps/ControllerApp.vue';
 import SettingsApp from '@/components/Apps/SettingsApp.vue';
 import InteractApp from '@/components/Apps/InteractApp.vue';
 import StartApp from '@/components/Apps/StartApp.vue';
-import OpenWorldApp from '@/components/Apps/OpenWorldApp.vue';
+import OpenWorldApp from '@/components/Apps/openWorldApp.vue';
 
 export default {
   components: {
@@ -131,7 +131,6 @@ export default {
 <style>
 .draggable-app {
   position: absolute;
-  cursor: move;
   z-index: 10;
 }
 </style>
